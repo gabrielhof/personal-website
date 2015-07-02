@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gabriel Hoff</title>
+		<script src="//cdn.flurry.com/js/flurry.js"></script>
+		<script>FlurryAgent.startSession("RNKGNGQ5SX53PRGS2JK7")</script>
+	</head>
+	<body>
+		<h1 style="text-align: center;">Teste do Flurry.</h1>
+		<script type="text/javascript">
+			document.addEventListener("mousemove", function(event) {
+				FlurryAgent.logEvent("Mouse", {
+					x: event.pageX,
+					y: event.pageY
+				});
+			});
+
+			document.addEventListener("keypress", function(event) {
+				FlurryAgent.logEvent("Mouse", {
+					key: event.key
+				});
+			});
+		</script>
+	<body>
+</html>
