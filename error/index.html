@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gabriel Hoff</title>
+	</head>
+	<body>
+		<h1 style="text-align: center;">Errors, errors everywhere.</h1>
+
+		<script type="text/javascript">
+			var logError = function() {
+				console.log(arguments);
+			};
+
+			if (window.attachEvent) {
+				window.attachEvent("onerror", logError);
+			} else if (window.addEventListener) {
+				window.addEventListener("error", logError);
+			} else {
+				window.onerror = logError;
+			}
+		</script>
+
+		<script type="text/javascript">
+			iDoNotExists.neitherDoI();
+		</script>
+	<body>
+</html>
