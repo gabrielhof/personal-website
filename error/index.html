@@ -8,15 +8,15 @@
 
 		<script type="text/javascript">
 			var logError = function() {
-				console.log(arguments);
+				console.log(JSON.stringify(arguments));
 			};
 
-			if (window.attachEvent) {
-				window.attachEvent("onerror", logError);
-				console.log("attachEvent");
-			} else if (window.addEventListener) {
+			if (window.addEventListener) {
 				window.addEventListener("error", logError);
 				console.log("eventListener");
+			} else if (window.attachEvent) {
+				window.attachEvent("onerror", logError);
+				console.log("attachEvent");
 			} else {
 				window.onerror = logError;
 				console.log("onError");
