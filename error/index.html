@@ -13,10 +13,13 @@
 
 			if (window.attachEvent) {
 				window.attachEvent("onerror", logError);
+				console.log("attachEvent");
 			} else if (window.addEventListener) {
 				window.addEventListener("error", logError);
+				console.log("eventListener");
 			} else {
 				window.onerror = logError;
+				console.log("onError");
 			}
 		</script>
 
