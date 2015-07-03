@@ -21,7 +21,7 @@
 					y: event.pageY
 				};
 
-				ga('send', 'event', 'Mouse', move);
+				ga('send', 'event', 'Mouse', "Teste", move);
 				ga('send', 'event', 'Mouse', JSON.stringify(move));
 			});
 
@@ -31,7 +31,6 @@
 				};
 
 				ga('send', 'event', 'Teclado', key);
-				ga('send', 'event', 'Teclado', JSON.stringify(key));
 			});
 		</script>
 	<body>
