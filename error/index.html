@@ -7,15 +7,28 @@
 		<h1 style="text-align: center;">Errors, errors everywhere.</h1>
 
 		<script type="text/javascript">
-			var logError = function(a, b, c, d, e, f, g, h) {
-				console.log(a);
-				console.log(b);
-				console.log(c);
-				console.log(d);
-				console.log(e);
-				console.log(f);
-				console.log(g);
-				console.log(h);
+			var logError = function(error, file, line, column) {
+				if (typeof(error) !== "object") {
+					error = {
+						message: error,
+						filename: file,
+						lineno: line
+					};
+
+					if (column) {
+						error.colno = column;
+					}
+				}
+
+				var errorOject = {
+					error: error.message,
+					file: error.filename,
+					line: error.lineno,
+				};
+
+				if (error.colno) {
+					errorOject.column = error.colno;
+				}
 			};
 
 			if (window.addEventListener) {
