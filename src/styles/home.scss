@@ -1,0 +1,56 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .introduction {
+    h1 {
+      color: #ccd6f6;
+      font-weight: 600;
+      font-size: 40px;
+      margin: 0px;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 40px;
+      margin: 0px 0px 10px;
+    }
+
+    h3 {
+      color: #64ffda;
+      font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Lucida Console', Monaco, monospace;
+      font-weight: normal;
+      font-size: 13px;
+      margin: 0px 0px 20px;
+    }
+  }
+
+  .contact-info {
+    list-style-type: none;
+    padding: 0px;
+    //margin: 0px auto;
+
+    li {
+      margin: 10px;
+
+      &> a {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        .icon {
+          width: 26px;
+        }
+      }
+    }
+
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0px;
+  }
+}
