@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import {Link} from 'gatsby';
 
 const MINIMUM_SCROLL = 50;
 
@@ -23,12 +24,6 @@ export default class HeaderSection extends React.Component {
 
   handleScroll = () => {
     const scrollPosition = (window.pageYOffset || document.documentElement.scrollTop);
-
-    console.log(
-      `Current: ${scrollPosition}`,
-      `With threshold: ${scrollPosition - MINIMUM_SCROLL}`,
-      `Last: ${this.lastScrollPosition}`
-    );
 
     const isOnTop = scrollPosition <= 0;
 
@@ -55,7 +50,9 @@ export default class HeaderSection extends React.Component {
         'header-on-top': isOnTop,
         'header-hidden': isScrollingDown
       })}>
-
+        <nav>
+          <Link className="website-logo" to="/">GH</Link>
+        </nav>
       </header>
     );
   }

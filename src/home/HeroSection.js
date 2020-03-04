@@ -3,6 +3,7 @@ import ExternalLink from 'src/components/ExternalLink';
 import Icon from 'src/components/Icon';
 
 export default class HeroSection extends React.PureComponent {
+
   render() {
     return (
       <section className="hero-section">
@@ -14,7 +15,8 @@ export default class HeroSection extends React.PureComponent {
 
         <div className="short-presentation">
           <p>
-            Quick introduction // TODO
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Elit scelerisque mauris pellentesque pulvinar pellentesque. Orci eu lobortis elementum nibh tellus molestie.
           </p>
         </div>
 
@@ -63,4 +65,5 @@ export default class HeroSection extends React.PureComponent {
       </section>
     );
   }
+
 }
