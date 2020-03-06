@@ -43,7 +43,7 @@ export default class WhatIDoSubsection extends React.Component {
 
     return (
       <div className="what-i-do-subsection">
-        <h4>What I do?</h4>
+        <h4 className="subheading">What I do?</h4>
 
         <Pagination
           dots={data.length}
@@ -64,7 +64,7 @@ export default class WhatIDoSubsection extends React.Component {
                 'not-current': (currentIndex !== index)
               })}
             >
-              <h3>{item.title}</h3>
+              <h3 className="title">{item.title}</h3>
 
               {item.description.split('\n').map(paragraph => (
                 <p key={paragraph}>

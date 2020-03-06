@@ -23,6 +23,37 @@
   }
 }
 
+.subheading {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  color: $primary-color;
+
+  &:before, &:after  {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $line-color;
+  }
+
+  &:before {
+    margin-right: 15px;
+  }
+
+  &:after {
+    margin-left: 15px;
+  }
+}
+
+.title {
+  color: $secondary-color;
+  text-align: center;
+  font-size: 21px;
+}
+
 .dot-pagination {
   width: 100%;
   display: flex;

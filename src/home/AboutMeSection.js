@@ -1,5 +1,6 @@
 import React from 'react';
-import WhatIDoSubsection from 'src/home/WhatIDoSlider';
+import WhatIDoSubsection from 'src/home/about/WhatIDoSubsection';
+import SkillsSubsection from 'src/home/about/SkillsSubsection';
 
 export default class AboutMeSection extends React.PureComponent {
 
@@ -10,7 +11,10 @@ export default class AboutMeSection extends React.PureComponent {
 
         <div className="picture">
           {/* TODO: use graphql to get the image */}
-          <img src="https://www.gravatar.com/avatar/39ea753c11ef1d94e09c1a9265767b4a?s=300&d=robohash" />
+          <img
+            src="https://www.gravatar.com/avatar/39ea753c11ef1d94e09c1a9265767b4a?s=300&d=robohash"
+            alt="myself"
+          />
         </div>
 
         <div className="description">
@@ -20,6 +24,8 @@ export default class AboutMeSection extends React.PureComponent {
         </div>
 
         <WhatIDoSubsection />
+
+        <SkillsSubsection />
       </section>
     );
   }
