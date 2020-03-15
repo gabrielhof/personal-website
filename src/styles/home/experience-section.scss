@@ -1,4 +1,8 @@
 .experience-section {
+  .heading {
+    margin-bottom: 0px;
+  }
+
   .timeline {
     display: flex;
 
@@ -25,71 +29,86 @@
         top: -12px;
         left: -11px
       }
-    }
 
-    .job-item {
-      width: 100%;
-
-      .job-header {
-        position: -webkit-sticky;
-        position: sticky;
-        background: $background-color;
-        top: 0px;
+      .job-item {
         width: 100%;
-        padding: 10px 5px 2px;
-        z-index: 1;
 
-        &:before {
-          content: " ";
-          display: flex;
-          background: $secondary-color;
-          position: relative;
-          width: 10px;
-          height: 1px;
-          top: 9px;
-          left: -16px
-        }
-
-        .period {
-          color: $default-color;
-          font-family: $secondary-font;
-          font-size: 13px;
-          font-weight: normal;
-          letter-spacing: 0.05em;
-          margin: 0px;
-        }
-
-        .title-and-company {
-          color: $primary-color;
-          font-size: 22px;
-          font-weight: 500;
-          margin: 10px 0px 0px;
-
-          .at {
-            color: $secondary-color;
-          }
-        }
-      }
-
-      .experience-list {
-        list-style: none;
-        padding: 0px;
-
-        li {
-          position: relative;
-          padding-left: 20px;
-          margin-bottom: 10px;
+        .job-header {
+          position: -webkit-sticky;
+          position: sticky;
+          background: $background-color;
+          top: -1px;
+          width: 100%;
+          padding: 11px 5px 2px;
+          z-index: 1;
 
           &:before {
-            content: "\25B9";
-            color: $secondary-color;
-            position: absolute;
-            left: 1px;
-            line-height: 22px;
+            content: " ";
+            display: flex;
+            background: $secondary-color;
+            position: relative;
+            width: 10px;
+            height: 1px;
+            top: 8px;
+            left: -16px
+          }
+
+          &.sticky {
+            box-shadow: $shadow-color 0px 11px 8px -10px;
+
+            .period {
+              color: $secondary-color;
+              font-size: 11px;
+            }
+
+            .title-and-company {
+              font-size: 16px;
+              margin-top: 5px;
+            }
+          }
+
+          .period {
+            color: $default-color;
+            font-family: $secondary-font;
+            font-size: 13px;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+            margin: 0px;
+            transition: all .5s;
+          }
+
+          .title-and-company {
+            color: $primary-color;
+            font-size: 22px;
+            font-weight: 500;
+            margin: 10px 0px 0px;
+            transition: all .5s;
+
+            .at {
+              color: $secondary-color;
+            }
+          }
+        }
+
+        .experience-list {
+          list-style: none;
+          padding: 0px;
+
+          li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+
+            &:before {
+              content: "\25B9";
+              color: $secondary-color;
+              position: absolute;
+              left: 1px;
+              line-height: 22px;
+            }
           }
         }
       }
     }
-  }
-
+    }
 }
