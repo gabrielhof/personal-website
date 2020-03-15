@@ -1,0 +1,55 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .introduction {
+    h1 {
+      color: $primary-color;
+      font-weight: 600;
+      font-size: 40px;
+      margin: 0px;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 40px;
+      margin: 0px 0px 10px;
+    }
+
+    h3 {
+      color: $secondary-color;
+      font-family: $secondary-font;
+      font-weight: normal;
+      font-size: 13px;
+      margin: 0px 0px 20px;
+    }
+  }
+
+  .contact-info {
+    list-style-type: none;
+    padding: 0px;
+
+    li {
+      margin: 10px;
+
+      &> a {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        .icon {
+          width: 26px;
+        }
+      }
+    }
+
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0px;
+  }
+}

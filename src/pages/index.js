@@ -3,7 +3,9 @@ import { Link } from 'gatsby';
 
 import WebsitePage from 'src/website/WebsitePage';
 import HeroSection from 'src/home/HeroSection';
-import AboutMeSection from 'src/home/AboutMeSection'
+import AboutMeSection from 'src/home/AboutMeSection';
+import ExperienceSection from 'src/home/ExperienceSection';
+
 import Image from '../components/image';
 import SEO from '../components/seo';
 
@@ -13,6 +15,7 @@ export default class IndexPage extends React.PureComponent {
       <WebsitePage title="Home">
         <HeroSection />
         <AboutMeSection />
+        <ExperienceSection />
       </WebsitePage>
     );
   }

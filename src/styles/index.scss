@@ -38,7 +38,7 @@ body {
   height: 70px;
   z-index: 10;
   transform: translateY(0px);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transition: all 0.50s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
   &.header-on-top {
     box-shadow: none;

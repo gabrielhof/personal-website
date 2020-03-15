@@ -59,7 +59,7 @@ export default class HeaderSection extends React.Component {
       state.hidden = (status.direction === 'down');
     }
 
-    if (state.onTop != this.state.onTop || state.hidden !== this.state.hidden) {
+    if (state.onTop !== this.state.onTop || state.hidden !== this.state.hidden) {
       this.setState(state);
     }
 

@@ -1,0 +1,95 @@
+.experience-section {
+  .timeline {
+    display: flex;
+
+    &:before {
+      content: " ";
+      background: $secondary-color;
+      position: relative;
+      width: 1px;
+      top: 19px;
+      margin: 0px 10px 31px 0px;
+    }
+
+    .jobs {
+      flex-grow: 2;
+      width: 100%;
+
+      &:after {
+        content: " ";
+        display: flex;
+        background: $secondary-color;
+        position: relative;
+        width: 10px;
+        height: 1px;
+        top: -12px;
+        left: -11px
+      }
+    }
+
+    .job-item {
+      width: 100%;
+
+      .job-header {
+        position: -webkit-sticky;
+        position: sticky;
+        background: $background-color;
+        top: 0px;
+        width: 100%;
+        padding: 10px 5px 2px;
+        z-index: 1;
+
+        &:before {
+          content: " ";
+          display: flex;
+          background: $secondary-color;
+          position: relative;
+          width: 10px;
+          height: 1px;
+          top: 9px;
+          left: -16px
+        }
+
+        .period {
+          color: $default-color;
+          font-family: $secondary-font;
+          font-size: 13px;
+          font-weight: normal;
+          letter-spacing: 0.05em;
+          margin: 0px;
+        }
+
+        .title-and-company {
+          color: $primary-color;
+          font-size: 22px;
+          font-weight: 500;
+          margin: 10px 0px 0px;
+
+          .at {
+            color: $secondary-color;
+          }
+        }
+      }
+
+      .experience-list {
+        list-style: none;
+        padding: 0px;
+
+        li {
+          position: relative;
+          padding-left: 20px;
+          margin-bottom: 10px;
+
+          &:before {
+            content: "\25B9";
+            color: $secondary-color;
+            position: absolute;
+            left: 1px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+}
