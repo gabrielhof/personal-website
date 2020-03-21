@@ -1,6 +1,7 @@
 import React from 'react';
 import ExternalLink from 'src/components/ExternalLink';
 import Icon from 'src/components/Icon';
+import ContactList from 'src/components/ContactList';
 
 export default class HeroSection extends React.PureComponent {
 
@@ -35,33 +36,7 @@ export default class HeroSection extends React.PureComponent {
           </li>
         </ul>
 
-        <ul className="contact-links">
-          <li>
-            <ExternalLink to="https://github.com/gabrielhof/">
-              <Icon>github</Icon>
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink to="https://linkedin.com/in/gabrielhof/">
-              <Icon>linkedin</Icon>
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink to="https://twitter.com/gabriel_hof/">
-              <Icon>twitter</Icon>
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink to="https://instagram.com/gabriel.hoff/">
-              <Icon>instagram</Icon>
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink to="https://facebook.com/gabrielhof/">
-              <Icon>facebook</Icon>
-            </ExternalLink>
-          </li>
-        </ul>
+        <ContactList />
       </section>
     );
   }

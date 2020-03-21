@@ -1,6 +1,7 @@
 import React from 'react';
 import Job from 'src/home/experience/Job';
-import ExternalLink from 'src/components/ExternalLink';
+
+//TODO: change the side of the timeline for each job
 
 export default class ExperienceSection extends React.PureComponent {
 
