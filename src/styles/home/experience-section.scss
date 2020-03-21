@@ -37,10 +37,11 @@
           position: -webkit-sticky;
           position: sticky;
           background: $background-color;
-          top: -1px;
+          top: 0px;
           width: 100%;
           padding: 11px 5px 2px;
           z-index: 1;
+          transition: all 0.50s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
           &:before {
             content: " ";
@@ -50,7 +51,11 @@
             width: 10px;
             height: 1px;
             top: 8px;
-            left: -16px
+            left: -16px;
+          }
+
+          &.page-header-shown {
+            top: 68px;
           }
 
           &.sticky {

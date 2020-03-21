@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 export default class Pagination extends React.PureComponent {
 
@@ -41,7 +41,7 @@ export default class Pagination extends React.PureComponent {
             key={value}
             type="button"
             className={
-              classnames({
+              classNames({
                 'pagination-button': true,
                 'current': (currentIndex === value)
               })

@@ -1,5 +1,5 @@
 import React from 'react';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import SwipeableViews from 'react-swipeable-views';
 import Pagination from 'src/components/Pagination';
 
@@ -59,7 +59,7 @@ export default class WhatIDoSubsection extends React.Component {
           {data.map((item, index) => (
             <div
               key={item.title}
-              className={classnames({
+              className={classNames({
                 slide: true,
                 'not-current': (currentIndex !== index)
               })}

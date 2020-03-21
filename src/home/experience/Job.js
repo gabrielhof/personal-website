@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import HeaderStatusEvent from 'src/components/HeaderStatusEvent';
+import Bumper from 'src/components/Bumper';
 import ExternalLink from 'src/components/ExternalLink';
 
-export default class Job extends React.PureComponent {
+export default class Job extends React.Component {
 
   static propTypes = {
     title: PropTypes.string,
@@ -13,52 +15,20 @@ export default class Job extends React.PureComponent {
     experience: PropTypes.arrayOf(PropTypes.string)
   }
 
-  jobItemRef = new React.createRef()
-  jobHeaderRef = new React.createRef()
-  headerObserver = null;
-
   state = {
-    headerSticked: false
+    pageHeaderShown: false,
+    jobHeaderSticked: false
   }
 
-  componentDidMount() {
-    this.headerObserver = new IntersectionObserver(entries => {
-      const [headerEntry] = entries;
-      this.handleHeaderPositionChanged(headerEntry);
-    }, {
-      threshold: [1]
-    });
-
-    if (!this.jobHeaderRef.current) {
-      return;
-    }
-
-    this.headerObserver.observe(this.jobHeaderRef.current);
-  }
-
-  componentWillUnmount() {
-    if (!this.headerObserver) {
-      return;
-    }
-
-    if (!this.jobHeaderRef.current) {
-      return;
-    }
-
-    this.headerObserver.unobserve(this.jobHeaderRef.current);
-  }
-
-  handleHeaderPositionChanged = headerEntry => {
-    const {intersectionRatio, boundingClientRect} = headerEntry;
-
-    const shouldStick = (intersectionRatio < 1 && boundingClientRect.top <= 0);
-
-    if (shouldStick === this.state.headerSticked) {
-      return;
-    }
-
+  handlePageHeaderChange = ({onTop, hidden}) => {
     this.setState({
-      headerSticked: shouldStick
+      pageHeaderShown: !onTop && !hidden
+    });
+  }
+
+  handleBumperChange = ({wasHit}) => {
+    this.setState({
+      jobHeaderSticked: wasHit
     });
   }
 
@@ -71,40 +41,48 @@ export default class Job extends React.PureComponent {
       experience
     } = this.props;
 
+    const {
+      pageHeaderShown,
+      jobHeaderSticked
+    } = this.state;
+
     return (
-      <div
-        ref={this.jobItemRef}
-        className="job-item"
-      >
-        <div
-          ref={this.jobHeaderRef}
-          className={classNames({
-            'job-header': true,
-            'sticky': this.state.headerSticked
-          })}
-        >
-          <h5 className="period">{period}</h5>
+      <>
+        <HeaderStatusEvent onChange={this.handlePageHeaderChange} />
 
-          <h4 className="title-and-company">
-            <span>{title}</span>
+        <div className="job-item">
+          <Bumper onChange={this.handleBumperChange} />
 
-            <span className="at"> @ </span>
+          <div
+            className={classNames({
+              'job-header': true,
+              'page-header-shown': pageHeaderShown,
+              'sticky': jobHeaderSticked
+            })}
+          >
+            <h5 className="period">{period}</h5>
 
-            <ExternalLink
-              className="at"
-              to={companyWebsite}
-            >
-              {companyName}
-            </ExternalLink>
-          </h4>
+            <h4 className="title-and-company">
+              <span>{title}</span>
+
+              <span className="at"> @ </span>
+
+              <ExternalLink
+                className="at"
+                to={companyWebsite}
+              >
+                {companyName}
+              </ExternalLink>
+            </h4>
+          </div>
+
+          <ul className="experience-list">
+            {experience.map(text => (
+              <li key={text}>{text}</li>
+            ))}
+          </ul>
         </div>
-
-        <ul className="experience-list">
-          {experience.map(text => (
-            <li key={text}>{text}</li>
-          ))}
-        </ul>
-      </div>
+      </>
     );
   }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 export default class Icon extends React.PureComponent {
 
@@ -20,7 +20,7 @@ export default class Icon extends React.PureComponent {
     const {children: iconName} = this.props;
 
     return (
-      <span className={classnames('icon', `icon-${iconName}`)}>
+      <span className={classNames('icon', `icon-${iconName}`)}>
       </span>
     );
   }

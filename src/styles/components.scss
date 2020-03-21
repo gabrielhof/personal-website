@@ -73,3 +73,12 @@
     }
   }
 }
+
+.bumper {
+  height: 1px;
+
+  &.page-header-shown {
+    position: relative;
+    top: -20px;
+  }
+}
