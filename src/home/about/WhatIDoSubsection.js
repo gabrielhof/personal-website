@@ -54,6 +54,7 @@ export default class WhatIDoSubsection extends React.Component {
         <SwipeableViews
           index={currentIndex}
           onChangeIndex={this.handleChangeSlide}
+          enableMouseEvents
           className="swipeable-container"
         >
           {data.map((item, index) => (

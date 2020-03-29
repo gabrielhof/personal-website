@@ -10,31 +10,31 @@ export default class HeroSection extends React.PureComponent {
       <section className="hero-section">
         <div className="introduction">
           <h3>Hey, I'm</h3>
-          <h1>Gabriel Hoff</h1>
-          <h2>and I'm a Software Enginer</h2>
+          <h1>Gabriel Hoff.</h1>
+          <h2>I'm a Software Enginer.</h2>
         </div>
 
         <div className="short-presentation">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Elit scelerisque mauris pellentesque pulvinar pellentesque. Orci eu lobortis elementum nibh tellus molestie.
+            <span>I'm a dedicated and proficient full stack software engineer, working remotely from </span>
+            <ExternalLink
+              to="https://goo.gl/maps/Xzp5hRJnGQ5kbKt77"
+              underlined
+            >
+              Novo Hamburgo, Brazil <Icon>location</Icon>
+            </ExternalLink>.
+            <span> I'm passioned by problem solving and building high-quality applications.</span>
           </p>
         </div>
 
-        <ul className="contact-info">
-          <li>
-            <ExternalLink to="mailto:gabrielhof@gmail.com">
-              <Icon>email</Icon>
-              gabrielhof@gmail.com
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink to="https://goo.gl/maps/Xzp5hRJnGQ5kbKt77">
-              <Icon>location</Icon>
-              Novo Hamburgo - Brazil
-            </ExternalLink>
-          </li>
-        </ul>
+        <div className="quickly-contact">
+          <ExternalLink
+            to="mailto:gabrielhof@gmail.com"
+            className="button"
+          >
+            <span>Let's have a talk</span>
+          </ExternalLink>
+        </div>
 
         <ContactList />
       </section>

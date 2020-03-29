@@ -18,9 +18,9 @@ export default class AboutMeSection extends React.PureComponent {
         </div>
 
         <div className="description">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <p>Purus gravida quis blandit turpis cursus in hac habitasse platea. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a.</p>
-          <p>Sit amet risus nullam eget felis eget nunc lobortis. Tellus orci ac auctor augue mauris.</p>
+          <p>Hey there! I'm Gabriel, a very dedicated and proficient remote Full-Stack software engineer and technical leader, based in Novo Hamburgo, Brazil.</p>
+          <p>I'm passioned by problem solving, building high quality applications and working with Agile principles.</p>
+          <p>Having almost 10 years of experience with both Back End and Front End development, worked from maintaning a legacy Java/JSF application, with more then 20GB of organ transplant data, to building modern web applications using Node.js and React for managing telematics data from 40.000+ vehicles.</p>
         </div>
 
         <WhatIDoSubsection />

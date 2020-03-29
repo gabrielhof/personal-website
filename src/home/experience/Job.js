@@ -68,8 +68,9 @@ export default class Job extends React.Component {
               <span className="at"> @ </span>
 
               <ExternalLink
-                className="at"
                 to={companyWebsite}
+                underlined
+                className="at"
               >
                 {companyName}
               </ExternalLink>
