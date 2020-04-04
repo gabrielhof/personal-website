@@ -13,7 +13,7 @@ const data = [
   {
     icon: 'gears',
     title: 'Back-End Development',
-    description: 'Develop object-oriented, test-driven, asynchronous, serverless, Java, JavaScript and Node.JS software, such as RESTful APIs, queue processing and WebSockets.'
+    description: 'Develop object-oriented, test-driven, asynchronous, serverless, Java, JavaScript and Node.js software, such as RESTful APIs, queue processing and WebSockets.'
   },
   {
     icon: 'stack',

@@ -43,8 +43,10 @@ export default class SkillsSubsection extends React.PureComponent {
             <li>Hibernate</li>
             <li>EclipseLink</li>
             <li>JSF</li>
-            <li>RabbitMQ</li>
             <li>AWS</li>
+            <li>EC2</li>
+            <li>S3</li>
+            <li>CloudFront</li>
             <li>SQL</li>
             <li>PHP</li>
           </ul>
@@ -54,10 +56,16 @@ export default class SkillsSubsection extends React.PureComponent {
           <h4 className="title">Beginner</h4>
 
           <ul className="skills-list">
-            <li><span>Elastic</span><span>search</span></li>
+            <li>Serveless</li>
+            <li>Lambda</li>
+            <li>API Gateway</li>
             <li>SQS</li>
+            <li>Elasticsearch</li>
+            <li>Redis</li>
+            <li>RabbitMQ</li>
             <li>Docker</li>
             <li>Sass</li>
+            <li>LESS</li>
             <li>CSS-in-JS</li>
           </ul>
         </div>
