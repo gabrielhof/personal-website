@@ -52,6 +52,26 @@
     &location:before {
       content: "\e906";
     }
+
+    &tag:before {
+      content: "\e90a";
+    }
+
+    &gears:before {
+      content: "\e907";
+    }
+
+    &stack:before {
+      content: "\e92e";
+    }
+
+    &cloud:before {
+      content: "\e908";
+    }
+
+    &group:before {
+      content: "\e909";
+    }
   }
 }
 

@@ -12,15 +12,29 @@ export default class Icon extends React.PureComponent {
       'linkedin',
       'twitter',
       'instagram',
-      'facebook'
+      'facebook',
+      'tag',
+      'gears',
+      'stack',
+      'cloud',
+      'group'
     ])
   }
 
   render() {
-    const {children: iconName} = this.props;
+    const {size, children: iconName} = this.props;
+
+    const style = {};
+
+    if (size) {
+      style.fontSize = `${size}em`;
+    }
 
     return (
-      <span className={classNames('icon', `icon-${iconName}`)}>
+      <span
+        className={classNames('icon', `icon-${iconName}`)}
+        style={style}
+      >
       </span>
     );
   }
