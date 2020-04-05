@@ -1,8 +1,7 @@
 import React from 'react';
-import classNames from 'classnames';
 import SwipeableViews from 'react-swipeable-views';
 import Pagination from 'src/components/Pagination';
-import Icon from 'src/components/Icon';
+import Specialty from 'src/home/about/Specialty';
 
 const data = [
   {
@@ -64,23 +63,13 @@ export default class WhatIDoSubsection extends React.Component {
           className="swipeable-container"
         >
           {data.map((item, index) => (
-            <div
+            <Specialty
               key={item.title}
-              className={classNames({
-                slide: true,
-                'not-current': (currentIndex !== index)
-              })}
-            >
-              <Icon size={2}>{item.icon}</Icon>
-
-              <h3 className="title">{item.title}</h3>
-
-              {item.description.split('\n').map(paragraph => (
-                <p key={paragraph}>
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+              current={currentIndex !== index}
+              icon={item.icon}
+              title={item.title}
+              description={item.description}
+            />
           ))}
         </SwipeableViews>
       </div>

@@ -1,4 +1,7 @@
 .experience-section {
+  .heading {
+    margin-bottom: 5px;
+  }
 
   .timeline {
     display: flex;
@@ -78,7 +81,7 @@
 
           .title-and-company {
             color: $primary-color;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 500;
             margin: 10px 0px 0px;
             transition: all .6s;
