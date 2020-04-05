@@ -16,14 +16,14 @@ export default class HeroSection extends React.PureComponent {
 
         <div className="short-presentation">
           <p>
-            <span>I'm a dedicated and proficient full stack software engineer, working remotely from </span>
+            <span>I'm a dedicated and proficient full-stack software engineer, working remotely from </span>
             <ExternalLink
               to="https://goo.gl/maps/Xzp5hRJnGQ5kbKt77"
               underlined
             >
               Novo Hamburgo, Brazil <Icon>location</Icon>
             </ExternalLink>.
-            <span> I'm passioned by problem solving and building high-quality applications.</span>
+            <span> I'm passionate about problem-solving and building high-quality applications.</span>
           </p>
         </div>
 
