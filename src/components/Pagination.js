@@ -37,7 +37,7 @@ export default class Pagination extends React.PureComponent {
     return (
       <div className="dot-pagination">
         {this.getDotArray().map(value => (
-          <span
+          <button
             key={value}
             type="button"
             className={
@@ -48,7 +48,7 @@ export default class Pagination extends React.PureComponent {
             }
             onClick={this.handleChangeIndex(value)}
           >
-          </span>
+          </button>
         ))}
       </div>
     )

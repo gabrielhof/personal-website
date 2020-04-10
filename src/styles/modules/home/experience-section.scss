@@ -1,4 +1,6 @@
 .experience-section {
+  margin-top: 150px;
+
   .heading {
     margin-bottom: 5px;
   }
@@ -88,6 +90,10 @@
 
             .at {
               color: $secondary-color;
+            }
+
+            @include media-breakpoint-up(sm) {
+              font-size: 22px;
             }
           }
         }

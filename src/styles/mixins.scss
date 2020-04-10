@@ -1,0 +1,39 @@
+@use "sass:sass:math";
+
+@mixin media-breakpoint-up($size) {
+  @if $size == sm {
+    @media (min-width: 576px) { @content; }
+  } @else if $size == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $size == lg {
+    @media (min-width: 992px) { @content; }
+  } @else if $size == xl {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == xxl {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+@mixin media-breakpoint-only($size) {
+  @if $size == xs {
+    @media (max-width: 575.98px) { @content; }
+  } @else if $size == sm {
+    @media (min-width: 576px) and (max-width: 767.98px) { @content; }
+  } @else if $size == md {
+    @media (min-width: 768px) and (max-width: 991.98px) { @content; }
+  } @else if $size == lg {
+    @media (min-width: 992px) and (max-width: 1199.98px) { @content; }
+  } @else if $size == xl {
+    @media (min-width: 1200px) and (max-width: 1799.98px) { @content; }
+  } @else if $size == xxl {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+@mixin carousel-per-slide($size) {
+  &#{$size} {
+    &> * {
+      width: (100% / $size);
+    }
+  }
+}

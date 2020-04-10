@@ -1,6 +1,5 @@
 import React from 'react';
-import SwipeableViews from 'react-swipeable-views';
-import Pagination from 'src/components/Pagination';
+import Carousel from 'src/components/Carousel';
 import Specialty from 'src/home/about/Specialty';
 
 const data = [
@@ -31,47 +30,23 @@ const data = [
   }
 ];
 
-export default class WhatIDoSubsection extends React.Component {
-
-  state = {
-    currentIndex: 0
-  }
-
-  handleChangeSlide = currentIndex => {
-    this.setState({
-      currentIndex
-    });
-  }
+export default class WhatIDoSubsection extends React.PureComponent {
 
   render() {
-    const {currentIndex} = this.state;
-
     return (
       <div className="what-i-do-subsection">
         <h4 className="subheading">What I do?</h4>
 
-        <Pagination
-          dots={data.length}
-          index={currentIndex}
-          onChangeIndex={this.handleChangeSlide}
-        />
-
-        <SwipeableViews
-          index={currentIndex}
-          onChangeIndex={this.handleChangeSlide}
-          enableMouseEvents
-          className="swipeable-container"
-        >
-          {data.map((item, index) => (
+        <Carousel xs={1} sm={2}>
+          {data.map(item => (
             <Specialty
               key={item.title}
-              current={currentIndex !== index}
               icon={item.icon}
               title={item.title}
               description={item.description}
             />
           ))}
-        </SwipeableViews>
+        </Carousel>
       </div>
     );
   }

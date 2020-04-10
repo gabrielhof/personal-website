@@ -4,8 +4,6 @@ import HeroSection from 'src/home/HeroSection';
 import AboutMeSection from 'src/home/AboutMeSection';
 import ExperienceSection from 'src/home/ExperienceSection';
 
-// TODO: increase margin between sections and subsections
-
 export default class IndexPage extends React.PureComponent {
   render() {
     return (

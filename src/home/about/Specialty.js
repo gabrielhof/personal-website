@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Icon from 'src/components/Icon';
 
 export default class Specialty extends React.PureComponent {
 
   static propTypes = {
-    current: PropTypes.bool,
     icon: Icon.propTypes.children,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired
@@ -20,16 +18,11 @@ export default class Specialty extends React.PureComponent {
     const {
       icon,
       title,
-      current,
       description
     } = this.props;
 
     return (
-      <div
-        className={classNames('slide', {
-          'not-current': current
-        })}
-      >
+      <div className="specialty">
         <Icon size={2}>{icon}</Icon>
 
         <h3 className="title">{title}</h3>

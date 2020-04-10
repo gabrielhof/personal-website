@@ -30,7 +30,7 @@ export default class HeroSection extends React.PureComponent {
         <div className="quickly-contact">
           <ExternalLink
             to="mailto:gabrielhof@gmail.com"
-            className="button"
+            className="button underlined"
           >
             <span>Let's have a talk</span>
           </ExternalLink>
