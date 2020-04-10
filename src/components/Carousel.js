@@ -39,6 +39,10 @@ export default class Carousel extends React.Component {
   }
 
   handleScreenResize = () => {
+    if (this.state.screenWidth === window.screen.width) {
+      return;
+    }
+
     this.setState({
       screenWidth: window.screen.width,
       currentIndex: 0

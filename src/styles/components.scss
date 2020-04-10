@@ -172,9 +172,5 @@ button {
       @include carousel-per-slide(11);
       @include carousel-per-slide(12);
     }
-
-    &> * {
-      padding: 0px 10px
-    }
   }
 }
