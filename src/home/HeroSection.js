@@ -1,6 +1,5 @@
 import React from 'react';
 import ExternalLink from 'src/components/ExternalLink';
-import Icon from 'src/components/Icon';
 import ContactList from 'src/components/ContactList';
 
 export default class HeroSection extends React.PureComponent {
@@ -16,14 +15,8 @@ export default class HeroSection extends React.PureComponent {
 
         <div className="short-presentation">
           <p>
-            <span>I'm a dedicated and proficient full-stack software engineer, working remotely from </span>
-            <ExternalLink
-              to="https://goo.gl/maps/Xzp5hRJnGQ5kbKt77"
-              underlined
-            >
-              Novo Hamburgo, Brazil <Icon>location</Icon>
-            </ExternalLink>.
-            <span> I'm passionate about problem-solving and building high-quality applications.</span>
+            I'm a dedicated, proficient, remote full-stack software engineer.
+            I'm passionate about problem-solving and building high-quality applications.
           </p>
         </div>
 

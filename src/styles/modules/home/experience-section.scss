@@ -35,6 +35,10 @@
       .job-item {
         width: 100%;
 
+        @include media-breakpoint-up(sm) {
+          font-size: 18px;
+        }
+
         .job-header {
           position: sticky;
           background: $background-color;
@@ -88,12 +92,12 @@
             margin: 10px 0px 0px;
             transition: all .6s;
 
-            .at {
-              color: $secondary-color;
-            }
-
             @include media-breakpoint-up(sm) {
               font-size: 22px;
+            }
+
+            .at {
+              color: $secondary-color;
             }
           }
         }
@@ -107,6 +111,7 @@
             position: relative;
             padding-left: 20px;
             margin-bottom: 10px;
+            max-width: $text-max-width;
 
             &:before {
               content: "\25B9";

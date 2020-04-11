@@ -37,7 +37,7 @@ export default class WhatIDoSubsection extends React.PureComponent {
       <div className="what-i-do-subsection">
         <h4 className="subheading">What I do?</h4>
 
-        <Carousel xs={1} sm={2}>
+        <Carousel xs={1} sm={2} lg={3}>
           {data.map(item => (
             <Specialty
               key={item.title}

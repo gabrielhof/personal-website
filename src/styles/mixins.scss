@@ -1,5 +1,3 @@
-@use "sass:sass:math";
-
 @mixin media-breakpoint-up($size) {
   @if $size == sm {
     @media (min-width: 576px) { @content; }
