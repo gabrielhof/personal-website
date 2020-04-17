@@ -73,6 +73,14 @@
 }
 
 a {
+  &.up {
+    display: inline-block;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
   &.underlined {
     background-image: linear-gradient($secondary-color, $secondary-color);
     background-position: 0% 100%;

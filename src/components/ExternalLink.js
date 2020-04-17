@@ -7,18 +7,20 @@ export default class HeroSection extends React.PureComponent {
   static propTypes = {
     to: PropTypes.string.isRequired,
     newTab: PropTypes.bool,
+    up: PropTypes.bool,
     underlined: PropTypes.bool,
     className: PropTypes.string,
     children: PropTypes.node
   }
 
   static defaultProps = {
+    up: false,
     underlined: false,
     newTab: true
   }
 
   render() {
-    const {to, newTab, underlined, className, children} = this.props;
+    const {to, newTab, up, underlined, className, children} = this.props;
 
     const aProps = {};
 
@@ -32,6 +34,7 @@ export default class HeroSection extends React.PureComponent {
         {...aProps}
         href={to}
         className={classNames(className, {
+          up,
           underlined
         })}
       >
