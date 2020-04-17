@@ -8,9 +8,9 @@ export default class HeroSection extends React.PureComponent {
     return (
       <section className="hero-section">
         <div className="introduction">
-          <h3>Hey, I'm</h3>
+          <h3>Hello World! I'm</h3>
           <h1>Gabriel Hoff.</h1>
-          <h2>I'm a Software Enginer.</h2>
+          <h2>I'm a Software Engineer.</h2>
         </div>
 
         <div className="short-presentation">

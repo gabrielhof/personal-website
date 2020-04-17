@@ -3,6 +3,7 @@ import WebsitePage from 'src/website/WebsitePage';
 import HeroSection from 'src/home/HeroSection';
 import AboutMeSection from 'src/home/AboutMeSection';
 import ExperienceSection from 'src/home/ExperienceSection';
+import ContactMe from 'src/home/ContactMe';
 
 export default class IndexPage extends React.PureComponent {
   render() {
@@ -11,6 +12,7 @@ export default class IndexPage extends React.PureComponent {
         <HeroSection />
         <AboutMeSection />
         <ExperienceSection />
+        <ContactMe />
       </WebsitePage>
     );
   }
