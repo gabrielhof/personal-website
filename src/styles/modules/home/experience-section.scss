@@ -8,121 +8,213 @@
   .timeline {
     display: flex;
 
-    &:before {
-      content: " ";
-      background: $secondary-color;
-      position: relative;
-      width: 1px;
-      top: 21px;
-      margin: 0px 10px 33px 0px;
+    @include media-breakpoint-up(md) {
+      margin: 0px 48px;
     }
 
     .jobs {
       flex-grow: 2;
       width: 100%;
 
-      &:after {
-        content: " ";
-        display: flex;
-        background: $secondary-color;
-        position: relative;
-        width: 10px;
-        height: 1px;
-        top: -12px;
-        left: -11px
-      }
-
       .job-item {
         width: 100%;
+        display: flex;
+        margin-bottom: 15px;
 
         @include media-breakpoint-up(sm) {
           font-size: 18px;
         }
 
-        .job-header {
-          position: sticky;
-          background: $background-color;
-          top: 0px;
-          width: 100%;
-          padding: 11px 5px 2px;
-          z-index: 1;
-          transition: all .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        &:before, &:after {
+          content: " ";
+          background: $secondary-color;
+          position: relative;
+          width: 1px;
+          margin-bottom: -15px;
+        }
+
+        &:nth-child(odd) {
+          &:before {
+            top: -10px;
+            left: -11px;
+          }
+
+          &:after {
+            content: none;
+          }
+        }
+
+        &:nth-child(even) {
+          text-align: right;
 
           &:before {
-            content: " ";
-            display: flex;
-            background: $secondary-color;
-            position: relative;
-            width: 10px;
-            height: 1px;
-            top: 9px;
-            left: -16px;
+            content: none;
           }
 
-          &.page-header-shown {
-            top: 68px;
+          &:after {
+            top: -11px;
+            right: -11px;
           }
 
-          &.sticky {
-            box-shadow: $shadow-color 0px 11px 8px -10px;
+          .job-item-container {
+            .job-content-container {
+              align-items: flex-end;
 
-            .period {
-              color: $secondary-color;
-            }
+              .job-header {
+                &:before {
+                  top: 8px;
+                  left: 16px;
+                  float: right
+                }
 
-            .title-and-company {
-              margin-top: 0px;
-            }
-          }
+                .period {
+                  position: relative;
+                  right: -11px;
+                }
+              }
 
-          .period {
-            color: $default-color;
-            font-family: $secondary-font;
-            font-size: 13px;
-            font-weight: normal;
-            letter-spacing: 0.05em;
-            margin: 0px;
-            transition: all .6s;
-          }
-
-          .title-and-company {
-            color: $primary-color;
-            font-size: 18px;
-            font-weight: 500;
-            margin: 10px 0px 0px;
-            transition: all .6s;
-
-            @include media-breakpoint-up(sm) {
-              font-size: 22px;
-            }
-
-            .at {
-              color: $secondary-color;
+              .experience-list {
+                text-align: left;
+              }
             }
           }
         }
 
-        .experience-list {
-          list-style: none;
-          padding: 0px;
-          margin: 20px 0px 50px;
+        &:nth-child(1) {
+          &:before {
+            top: 21px;
+            margin-bottom: 16px;
+          }
 
-          li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 10px;
-            max-width: $text-max-width;
-
+          .job-item-container {
             &:before {
-              content: "\25B9";
-              color: $secondary-color;
-              position: absolute;
-              left: 1px;
-              line-height: 22px;
+              content: none;
+            }
+          }
+        }
+
+        &:nth-last-child(1) {
+          .job-item-container {
+            &:after {
+              width: 20%;
+              float: right;
+              left: 12px;
+            }
+          }
+        }
+
+        .job-item-container {
+          width: 100%;
+
+          &:before, &:after {
+            content: "";
+            background: $secondary-color;
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 1px;
+          }
+
+          &:before {
+            right: -11px;
+            top: -11px;
+          }
+
+          &:after {
+            left: -11px;
+            bottom: -5px;
+          }
+
+          .job-content-container {
+            display: flex;
+            flex-direction: column;
+
+            .job-header {
+              position: sticky;
+              background: $background-color;
+              top: 0px;
+              width: 97%;
+              padding: 11px 5px 2px;
+              z-index: 1;
+              transition: all .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+              &:before {
+                content: " ";
+                display: flex;
+                background: $secondary-color;
+                position: relative;
+                width: 10px;
+                height: 1px;
+                top: 9px;
+                left: -16px;
+              }
+
+              &.page-header-shown {
+                top: 68px;
+              }
+
+              &.sticky {
+                box-shadow: $shadow-color 0px 11px 8px -10px;
+
+                .period {
+                  color: $secondary-color;
+                }
+
+                .title-and-company {
+                  margin-top: 0px;
+                }
+              }
+
+              .period {
+                color: $default-color;
+                font-family: $secondary-font;
+                font-size: 13px;
+                font-weight: normal;
+                letter-spacing: 0.05em;
+                margin: 0px;
+                transition: all .6s;
+              }
+
+              .title-and-company {
+                color: $primary-color;
+                font-size: 18px;
+                font-weight: 500;
+                margin: 10px 0px 0px;
+                transition: all .6s;
+
+                @include media-breakpoint-up(sm) {
+                  font-size: 22px;
+                }
+
+                .at {
+                  color: $secondary-color;
+                }
+              }
+            }
+
+            .experience-list {
+              list-style: none;
+              padding: 0px;
+              margin: 20px 0px 50px;
+              max-width: 600px;
+
+              li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 10px;
+
+                &:before {
+                  content: "\25B9";
+                  color: $secondary-color;
+                  position: absolute;
+                  left: 1px;
+                  line-height: 22px;
+                }
+              }
             }
           }
         }
       }
     }
-    }
+  }
 }

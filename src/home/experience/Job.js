@@ -51,37 +51,41 @@ export default class Job extends React.Component {
         <HeaderStatusEvent onChange={this.handlePageHeaderChange} />
 
         <div className="job-item">
-          <Bumper onChange={this.handleBumperChange} />
+          <div className="job-item-container">
+            <div className="job-content-container">
+              <Bumper onChange={this.handleBumperChange} />
 
-          <div
-            className={classNames({
-              'job-header': true,
-              'page-header-shown': pageHeaderShown,
-              'sticky': jobHeaderSticked
-            })}
-          >
-            <h5 className="period">{period}</h5>
-
-            <h4 className="title-and-company">
-              <span>{title}</span>
-
-              <span className="at"> @ </span>
-
-              <ExternalLink
-                to={companyWebsite}
-                underlined
-                className="at"
+              <div
+                className={classNames({
+                  'job-header': true,
+                  'page-header-shown': pageHeaderShown,
+                  'sticky': jobHeaderSticked
+                })}
               >
-                {companyName}
-              </ExternalLink>
-            </h4>
-          </div>
+                <h5 className="period">{period}</h5>
 
-          <ul className="experience-list">
-            {experience.map(text => (
-              <li key={text}>{text}</li>
-            ))}
-          </ul>
+                <h4 className="title-and-company">
+                  <span>{title}</span>
+
+                  <span className="at"> @ </span>
+
+                  <ExternalLink
+                    to={companyWebsite}
+                    underlined
+                    className="at"
+                  >
+                    {companyName}
+                  </ExternalLink>
+                </h4>
+              </div>
+
+              <ul className="experience-list">
+                {experience.map(text => (
+                  <li key={text}>{text}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </>
     );
