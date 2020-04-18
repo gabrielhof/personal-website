@@ -9,7 +9,7 @@ export default class ContactMe extends React.PureComponent {
 
         <h3>Get In Touch</h3>
 
-        <p className="information">Reach out to me. Lets discuss about your project and how I might be able to help bringing you ideas into the real world.</p>
+        <p className="information">Reach out to me. Lets discuss about your project and how I might be able to help bringing your ideas into the real world.</p>
 
         <div class="quickly-contact">
           <ExternalLink

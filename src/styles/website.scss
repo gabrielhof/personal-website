@@ -59,6 +59,15 @@
     margin-top: 20px;
     padding: 0px 100px;
   }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0px 150px;
+  }
+
+  & > * {
+    max-width: 1000px;
+    margin: 0px auto;
+  }
 }
 
 .side-contact-list {
@@ -74,6 +83,10 @@
     display: block;
   }
 
+  @include media-breakpoint-up(lg) {
+    left: 40px;
+  }
+
   .links {
     flex-direction: column;
     align-items: center;
@@ -85,7 +98,7 @@
       content: "";
       display: block;
       width: 1px;
-      height: 90px;
+      height: 101px;
       margin: 10px auto 0px;
       background: $primary-color;
     }
@@ -109,6 +122,10 @@
     display: block;
   }
 
+  @include media-breakpoint-up(lg) {
+    right: 40px;
+  }
+
   .email-container {
     display: flex;
     flex-direction: column;
@@ -119,19 +136,23 @@
       content: "";
       display: block;
       width: 1px;
-      height: 90px;
+      height: 101px;
       margin: 15px auto 0px;
       background: $primary-color;
     }
 
     a {
-      writing-mode: vertical-rl;
-      letter-spacing: 0.1em;
       padding: 10px;
+      text-align: right;
 
-      font: {
-        family: $secondary-font;
-        size: 14px;
+      .email {
+        writing-mode: vertical-rl;
+        letter-spacing: 0.1em;
+
+        font: {
+          family: $secondary-font;
+          size: 14px;
+        }
       }
     }
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ExternalLink from 'src/components/ExternalLink';
+import Icon from 'src/components/Icon';
 
 export default class SideContactEmail extends React.PureComponent {
   render() {
@@ -7,7 +8,8 @@ export default class SideContactEmail extends React.PureComponent {
       <div className="side-contact-email">
         <div className="email-container">
           <ExternalLink to="mailto:gabrielhof@gmail.com" up>
-            gabrielhof@gmail.com
+            <span className="email">gabrielhof@gmail.com</span>
+            <Icon>email</Icon>
           </ExternalLink>
         </div>
       </div>
