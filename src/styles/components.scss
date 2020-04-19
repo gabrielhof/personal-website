@@ -172,30 +172,60 @@ button {
   }
 }
 
-.carousel-container {
-  .carousel-slide {
-    transition: opacity .5s ease-in;
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
-    opacity: 0.3;
+.carousel-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    &.active {
-      opacity: 1;
+  .navigation {
+    flex-grow: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+    height: 70px;
+    padding: 0px;
+    color: $default-color;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $primary-color;
     }
 
-    &.per-slide- {
-      @include carousel-per-slide(1);
-      @include carousel-per-slide(2);
-      @include carousel-per-slide(3);
-      @include carousel-per-slide(5);
-      @include carousel-per-slide(6);
-      @include carousel-per-slide(7);
-      @include carousel-per-slide(8);
-      @include carousel-per-slide(9);
-      @include carousel-per-slide(10);
-      @include carousel-per-slide(11);
-      @include carousel-per-slide(12);
+    &.arrow-left:hover {
+      transform: translateX(-5px);
+    }
+
+    &.arrow-right:hover {
+      transform: translateX(5px);
     }
   }
+
+  .carousel-container {
+    .carousel-slide {
+      transition: opacity .5s ease-in;
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+      opacity: 0.3;
+
+      &.active {
+        opacity: 1;
+      }
+
+      &.per-slide- {
+        @include carousel-per-slide(1);
+        @include carousel-per-slide(2);
+        @include carousel-per-slide(3);
+        @include carousel-per-slide(5);
+        @include carousel-per-slide(6);
+        @include carousel-per-slide(7);
+        @include carousel-per-slide(8);
+        @include carousel-per-slide(9);
+        @include carousel-per-slide(10);
+        @include carousel-per-slide(11);
+        @include carousel-per-slide(12);
+      }
+    }
+}
 }

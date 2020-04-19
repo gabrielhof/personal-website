@@ -55,6 +55,36 @@ export default class Carousel extends React.Component {
     });
   }
 
+  handleSlideLeft = maxSlides => () => {
+    const {currentIndex} = this.state;
+    let nextIndex = currentIndex;
+
+    if (currentIndex <= 0) {
+      nextIndex = (maxSlides - 1);
+    } else {
+      nextIndex = (currentIndex - 1);
+    }
+
+    this.setState({
+      currentIndex: nextIndex
+    });
+  }
+
+  handleSlideRight = maxSlides => () => {
+    const {currentIndex} = this.state;
+    let nextIndex = currentIndex;
+
+    if (currentIndex >= (maxSlides - 1)) {
+      nextIndex = 0;
+    } else {
+      nextIndex = (currentIndex + 1);
+    }
+
+    this.setState({
+      currentIndex: nextIndex
+    });
+  }
+
   getScreenConfig() {
     const {props: sizes} = this;
     const width = this.state.screenWidth;
@@ -105,9 +135,11 @@ export default class Carousel extends React.Component {
     const {type, sizePerSlide} = this.getScreenConfig();
     const children = this.groupedChildren(sizePerSlide);
 
+    const slides = children.length;
+
     return (
       <>
-        {children.length > 1 && (
+        {slides > 1 && (
           <Pagination
             dots={children.length}
             index={currentIndex}
@@ -115,25 +147,41 @@ export default class Carousel extends React.Component {
           />
         )}
 
-        <SwipeableViews
-          index={currentIndex}
-          onChangeIndex={this.handleChangeSlide}
-          enableMouseEvents
-          className="carousel-container"
-        >
-          {children.map((child, index) => (
-            <div
-              key={`${type}-${index}`}
-              className={classNames(
-                'carousel-slide',
-                `per-slide-${child.length}`,
-                (currentIndex === index) && 'active'
-              )}
-            >
-              {child}
-            </div>
-          ))}
-        </SwipeableViews>
+        <div className="carousel-navigation">
+          <button
+            className="navigation arrow-left"
+            onClick={this.handleSlideLeft(children.length)}
+          >
+            {'<'}
+          </button>
+
+          <SwipeableViews
+            index={currentIndex}
+            onChangeIndex={this.handleChangeSlide}
+            enableMouseEvents
+            className="carousel-container"
+          >
+            {children.map((child, index) => (
+              <div
+                key={`${type}-${index}`}
+                className={classNames(
+                  'carousel-slide',
+                  `per-slide-${child.length}`,
+                  (currentIndex === index) && 'active'
+                )}
+              >
+                {child}
+              </div>
+            ))}
+          </SwipeableViews>
+
+          <button
+            onClick={this.handleSlideRight(children.length)}
+            className="navigation arrow-right"
+          >
+            {'>'}
+          </button>
+        </div>
       </>
     );
   }

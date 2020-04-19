@@ -26,10 +26,15 @@ a {
   }
 }
 
-button {
+input[type="button"], button {
   border: solid 1px $secondary-color;
   border-radius: 3px;
   padding: 25px 20px 20px;
   color: $secondary-color;
   position: relative;
+  outline: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
 }
