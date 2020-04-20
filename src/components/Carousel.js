@@ -161,7 +161,6 @@ export default class Carousel extends React.Component {
           <SwipeableViews
             index={currentIndex}
             onChangeIndex={this.handleChangeSlide}
-            enableMouseEvents
             className="carousel-container"
           >
             {children.map((child, index) => (
