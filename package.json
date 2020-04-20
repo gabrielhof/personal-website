@@ -19,7 +19,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop --host 0.0.0.0",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --host 0.0.0.0",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
@@ -34,6 +34,7 @@
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-sharp": "^2.3.7",
+    "intersection-observer": "^0.9.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -43,5 +44,8 @@
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.5"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

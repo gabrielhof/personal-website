@@ -26,11 +26,12 @@ export default class Carousel extends React.Component {
   }
 
   state = {
-    screenWidth: window.screen.width,
+    screenWidth: 0,
     currentIndex: 0
   }
 
   componentDidMount() {
+    this.handleScreenResize();
     window.addEventListener('resize', this.handleScreenResize);
   }
 
@@ -39,12 +40,14 @@ export default class Carousel extends React.Component {
   }
 
   handleScreenResize = () => {
-    if (this.state.screenWidth === window.screen.width) {
+    const currentWidth = document.body.clientWidth;
+
+    if (this.state.screenWidth === currentWidth) {
       return;
     }
 
     this.setState({
-      screenWidth: window.screen.width,
+      screenWidth: currentWidth,
       currentIndex: 0
     });
   }

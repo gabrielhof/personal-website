@@ -21,10 +21,14 @@
 
   nav {
     height: 100%;
-    margin: 0px 50px;
+    margin: 0px 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include media-breakpoint-up(md) {
+      margin: 0px 50px;
+    }
   }
 
   .website-logo {

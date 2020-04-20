@@ -24,7 +24,7 @@ export default class HeaderStatusEvent extends React.PureComponent {
     hidden: false
   }
 
-  componentWillMount() {
+  componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
     this.handleScroll();
   }

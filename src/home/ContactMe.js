@@ -11,7 +11,7 @@ export default class ContactMe extends React.PureComponent {
 
         <p className="information">Reach out to me. Lets discuss about your project and how I might be able to help bringing your ideas into the real world.</p>
 
-        <div class="quickly-contact">
+        <div className="quickly-contact">
           <ExternalLink
             to="mailto:gabrielhof@gmail.com"
             className="button underlined"
