@@ -49,7 +49,8 @@ const jobs = [
   {
     title: 'Full-Stack Software Engineer',
     company: {
-      name: 'Quefo.me'
+      name: 'Quefo.me',
+      website: 'https://www.linkedin.com/company/quefome/'
     },
     period: 'Jan 2015 - Oct 2015',
     experience: [
@@ -105,7 +106,7 @@ export default class ExperienceSection extends React.PureComponent {
                 key={job.title + job.company.name + job.period}
                 title={job.title}
                 companyName={job.company.name}
-                companyWebsite={job.company.website}
+                companyWebsite={job.company.website || '/'}
                 period={job.period}
                 experience={job.experience}
               />

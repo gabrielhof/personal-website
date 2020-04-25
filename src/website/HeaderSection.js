@@ -32,7 +32,13 @@ export default class HeaderSection extends React.Component {
           'header-hidden': !onTop && hidden
         })}>
           <nav>
-            <Link className="website-logo" to="/">GH</Link>
+            <Link
+              id="header-home-link"
+              className="website-logo"
+              to="/"
+            >
+              GH
+            </Link>
           </nav>
         </header>
       </>

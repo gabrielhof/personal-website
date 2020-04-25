@@ -22,7 +22,12 @@ export default class Carousel extends React.Component {
     md: PropTypes.number,
     lg: PropTypes.number,
     xl: PropTypes.number,
-    xxl: PropTypes.number
+    xxl: PropTypes.number,
+    onChange: PropTypes.func
+  }
+
+  static defaultProps = {
+    onChange: () => {}
   }
 
   state = {
@@ -52,9 +57,17 @@ export default class Carousel extends React.Component {
     });
   }
 
-  handleChangeSlide = currentIndex => {
+  handleChangeSlide = source => nextIndex => {
+    const {currentIndex: previousIndex} = this.state;
+
     this.setState({
-      currentIndex
+      currentIndex: nextIndex
+    });
+
+    this.props.onChange({
+      previous: previousIndex,
+      current: nextIndex,
+      source
     });
   }
 
@@ -68,9 +81,7 @@ export default class Carousel extends React.Component {
       nextIndex = (currentIndex - 1);
     }
 
-    this.setState({
-      currentIndex: nextIndex
-    });
+    this.handleChangeSlide('arrow-button')(nextIndex);
   }
 
   handleSlideRight = maxSlides => () => {
@@ -83,9 +94,7 @@ export default class Carousel extends React.Component {
       nextIndex = (currentIndex + 1);
     }
 
-    this.setState({
-      currentIndex: nextIndex
-    });
+    this.handleChangeSlide('arrow-button')(nextIndex);
   }
 
   getScreenConfig() {
@@ -146,12 +155,13 @@ export default class Carousel extends React.Component {
           <Pagination
             dots={children.length}
             index={currentIndex}
-            onChangeIndex={this.handleChangeSlide}
+            onChangeIndex={this.handleChangeSlide('pagination')}
           />
         )}
 
         <div className="carousel-navigation">
           <button
+            type="button"
             className="navigation arrow-left"
             onClick={this.handleSlideLeft(children.length)}
           >
@@ -160,7 +170,7 @@ export default class Carousel extends React.Component {
 
           <SwipeableViews
             index={currentIndex}
-            onChangeIndex={this.handleChangeSlide}
+            onChangeIndex={this.handleChangeSlide('swipe')}
             className="carousel-container"
           >
             {children.map((child, index) => (
@@ -178,6 +188,7 @@ export default class Carousel extends React.Component {
           </SwipeableViews>
 
           <button
+            type="button"
             onClick={this.handleSlideRight(children.length)}
             className="navigation arrow-right"
           >

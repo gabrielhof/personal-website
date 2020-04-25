@@ -22,6 +22,7 @@ export default class HeroSection extends React.PureComponent {
 
         <div className="quickly-contact">
           <ExternalLink
+            id="hero-email-link"
             to="mailto:gabrielhof@gmail.com"
             className="button underlined"
           >
@@ -29,7 +30,7 @@ export default class HeroSection extends React.PureComponent {
           </ExternalLink>
         </div>
 
-        <ContactList />
+        <ContactList id="hero-contact" />
       </section>
     );
   }

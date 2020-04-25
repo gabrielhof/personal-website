@@ -7,7 +7,11 @@ export default class SideContactEmail extends React.PureComponent {
     return (
       <div className="side-contact-email">
         <div className="email-container">
-          <ExternalLink to="mailto:gabrielhof@gmail.com" up>
+          <ExternalLink
+            up
+            id="side-contact-email-link"
+            to="mailto:gabrielhof@gmail.com"
+          >
             <span className="email">gabrielhof@gmail.com</span>
             <Icon>email</Icon>
           </ExternalLink>

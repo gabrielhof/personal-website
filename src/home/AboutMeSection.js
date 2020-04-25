@@ -4,7 +4,9 @@ import Icon from 'src/components/Icon';
 import WhatIDoSubsection from 'src/home/about/WhatIDoSubsection';
 import SkillsSubsection from 'src/home/about/SkillsSubsection';
 
-//TODO better style for my profile image
+// TODO: use graphql to get the image
+// TODO: better image quality
+// TODO: better :hover effect on the image colors
 
 export default class AboutMeSection extends React.PureComponent {
 
@@ -15,10 +17,12 @@ export default class AboutMeSection extends React.PureComponent {
 
         <div className="picture-and-description">
           <div className="picture">
-            {/* TODO: use graphql to get the image */}
-            <ExternalLink to="https://github.com/gabrielhof/">
+            <ExternalLink
+              id="about-me-picture-github-link"
+              to="https://github.com/gabrielhof/"
+            >
               <img
-                src="https://www.gravatar.com/avatar/39ea753c11ef1d94e09c1a9265767b4a?s=300&d=robohash"
+                src="https://www.gravatar.com/avatar/39ea753c11ef1d94e09c1a9265767b4a?s=400&d=robohash"
                 alt="Me"
               />
             </ExternalLink>
@@ -35,7 +39,7 @@ export default class AboutMeSection extends React.PureComponent {
               </ExternalLink>
               <span>.</span>
             </p>
-            <p>I'm passionate about problem-solving, building high-quality applications and working with Agile principles.</p>
+            <p>I'm passionate about problem-solving, building high-quality applications and working on top of Agile principles.</p>
             <p>Having almost 10 years of experience with both Back End and Front End development, I worked from maintaining a legacy Java/JSF application, with more than 20GB of organ transplant data, to building modern web applications using Node.js and React for managing telematics data from 40.000+ vehicles.</p>
           </div>
         </div>

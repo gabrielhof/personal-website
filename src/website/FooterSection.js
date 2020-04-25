@@ -7,7 +7,7 @@ export default class FooterSection extends React.PureComponent {
   render() {
     return (
       <footer className="footer-section">
-        <ContactList />
+        <ContactList id="footer-contact" />
 
         <div className="description">
           <p>

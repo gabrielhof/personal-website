@@ -13,6 +13,7 @@ export default class ContactMe extends React.PureComponent {
 
         <div className="quickly-contact">
           <ExternalLink
+            id="contact-me-email-link"
             to="mailto:gabrielhof@gmail.com"
             className="button underlined"
           >

@@ -1,4 +1,5 @@
 import React from 'react';
+import {trackCustomEvent} from 'gatsby-plugin-google-analytics';
 import Carousel from 'src/components/Carousel';
 import Specialty from 'src/home/about/Specialty';
 
@@ -32,12 +33,25 @@ const data = [
 
 export default class WhatIDoSubsection extends React.PureComponent {
 
+  handleSpecialtyChanged = ({source, previous, current}) => {
+    trackCustomEvent({
+      category: 'What I Do Specialties',
+      action: 'Changed',
+      label: `Source: ${source}, Previous: ${previous}, Current: ${current}`
+    });
+  }
+
   render() {
     return (
       <div className="what-i-do-subsection">
         <h4 className="subheading">What I do?</h4>
 
-        <Carousel xs={1} sm={2} lg={3}>
+        <Carousel
+          xs={1}
+          sm={2}
+          lg={3}
+          onChange={this.handleSpecialtyChanged}
+        >
           {data.map(item => (
             <Specialty
               key={item.title}

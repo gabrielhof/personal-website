@@ -20,7 +20,7 @@ export default class HeroSection extends React.PureComponent {
   }
 
   render() {
-    const {to, newTab, up, underlined, className, children} = this.props;
+    const {to, newTab, up, underlined, className, children, ...rest} = this.props;
 
     const aProps = {};
 
@@ -31,6 +31,7 @@ export default class HeroSection extends React.PureComponent {
 
     return (
       <a
+        {...rest}
         {...aProps}
         href={to}
         className={classNames(className, {
