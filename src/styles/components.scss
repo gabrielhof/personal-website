@@ -132,14 +132,16 @@ button {
     }
 
     &:hover, :focus, :active {
-      background: rgba(100, 255, 218, 0.07);
-
       &:after {
         width: 100%;
         transform: scaleX(1);
         visibility: visible;
       }
     }
+  }
+
+  &:hover, :focus, :active {
+    background: rgba(100, 255, 218, 0.07);
   }
 }
 

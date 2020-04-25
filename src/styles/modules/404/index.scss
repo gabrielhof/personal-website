@@ -1,0 +1,43 @@
+.not-found-container {
+  margin-top: 90px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    margin: 0px 0px 10px;
+    color: $primary-color;
+    line-height: 1;
+
+    font: {
+      size: 30px;
+      weight: 400;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 40px;
+    }
+  }
+
+  h2 {
+    margin: 0px 0px 10px;
+    color: $secondary-color;
+    line-height: 1;
+
+    font: {
+      family: $secondary-font;
+      weight: 600;
+      size: 120px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 160px;
+    }
+  }
+
+  a {
+    margin-top: 40px;
+  }
+}

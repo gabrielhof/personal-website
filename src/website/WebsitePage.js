@@ -17,7 +17,7 @@ export default class WebsitePage extends React.PureComponent {
 
   render() {
     return (
-      <>
+      <div className="website-container">
         <HeaderSection />
 
         <main className="main-content">
@@ -28,7 +28,7 @@ export default class WebsitePage extends React.PureComponent {
         <SideEmailContact />
 
         <FooterSection />
-      </>
+      </div>
     );
   }
 };

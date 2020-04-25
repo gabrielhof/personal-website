@@ -1,14 +1,18 @@
-import React from "react"
+import React from 'react';
+import WebsitePage from 'src/website/WebsitePage';
+import {Link} from 'gatsby';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+export default class NotFoundPage extends React.PureComponent {
+  render() {
+    return (
+      <WebsitePage title="Not Found">
+        <div className="not-found-container">
+          <h2>404</h2>
+          <h3>Page Not Found</h3>
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
-
-export default NotFoundPage
+          <Link to="/" className="button">Home</Link>
+        </div>
+      </WebsitePage>
+    );
+  }
+}

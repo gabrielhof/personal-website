@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-export default class HeroSection extends React.PureComponent {
+export default class ExternalLink extends React.PureComponent {
 
   static propTypes = {
     to: PropTypes.string.isRequired,
