@@ -141,7 +141,7 @@ button {
   }
 
   &:hover, :focus, :active {
-    background: rgba(100, 255, 218, 0.07);
+    background: $button-hover-color;
   }
 }
 

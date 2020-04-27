@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Meta from 'src/components/Meta';
 import HeaderSection from 'src/website/HeaderSection';
 import FooterSection from 'src/website/FooterSection';
 import SideContactList from 'src/website/SideContactList';
@@ -11,24 +12,30 @@ export default class WebsitePage extends React.PureComponent {
 
   static propTypes = {
     title: PropTypes.string,
-    headProps: PropTypes.shape(),
-    children: PropTypes.node.isRequired,
+    fullTitle: PropTypes.string,
+    location: PropTypes.object,
+    children: PropTypes.node.isRequired
   }
 
   render() {
+    const {title, fullTitle, location} = this.props;
     return (
-      <div className="website-container">
-        <HeaderSection />
+      <>
+        <Meta title={title} fullTitle={fullTitle} location={location} />
 
-        <main className="main-content">
-          {this.props.children}
-        </main>
+        <div className="website-container">
+          <HeaderSection />
 
-        <SideContactList />
-        <SideEmailContact />
+          <main className="main-content">
+            {this.props.children}
+          </main>
 
-        <FooterSection />
-      </div>
+          <SideContactList />
+          <SideEmailContact />
+
+          <FooterSection />
+        </div>
+      </>
     );
   }
 };

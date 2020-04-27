@@ -7,8 +7,13 @@ import ContactMe from 'src/home/ContactMe';
 
 export default class IndexPage extends React.PureComponent {
   render() {
+    const {location} = this.props;
+
     return (
-      <WebsitePage title="Home">
+      <WebsitePage
+        fullTitle="Gabriel Hoff | Software Engineer"
+        location={location}
+      >
         <HeroSection />
         <AboutMeSection />
         <ExperienceSection />
