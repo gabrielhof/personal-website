@@ -1,19 +1,19 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gabrielhof-personal-website",
+  "description": "Second version of my personal website",
+  "version": "2.0.0",
+  "author": "Gabriel Hoff <gabrielof@gmail.com>",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "license": "MIT",
+  "license": "TBD",
   "keywords": [
     "gatsby"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/gabrielhof/personal-website"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/gabrielhof/personal-website/issues"
   },
   "scripts": {
     "deploy": "npm run build && gh-pages -d public -r git@github.com:gabrielhof/gabrielhof.github.io.git -b master",
