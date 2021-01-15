@@ -30,7 +30,7 @@ export default class AboutMeSection extends React.PureComponent {
 
           <div className="description">
             <p>
-              <span>Hey there! I'm Gabriel, a very dedicated and proficient remote full-Stack software engineer and technical leader, based in </span>
+              <span>Hey there! I'm Gabriel, a very dedicated and proficient remote full-stack software engineer and technical leader, based in </span>
               <ExternalLink
                 to="https://goo.gl/maps/Xzp5hRJnGQ5kbKt77"
                 underlined
@@ -40,7 +40,7 @@ export default class AboutMeSection extends React.PureComponent {
               <span>.</span>
             </p>
             <p>I'm passionate about problem-solving, building high-quality applications and working on top of Agile principles.</p>
-            <p>Having almost 10 years of experience with both Back End and Front End development, I worked from maintaining a legacy Java/JSF application, with more than 20GB of organ transplant data, to building modern web applications using Node.js and React for managing telematics data from 40.000+ vehicles.</p>
+            <p>Having almost 10 years of experience with both back end and front end development, I worked from maintaining a legacy Java/JSF application, with more than 20GB of organ transplant data, to building modern web applications using Node.js and React for managing telematics data from 40.000+ vehicles.</p>
           </div>
         </div>
 

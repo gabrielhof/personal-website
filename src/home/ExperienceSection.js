@@ -5,17 +5,17 @@ import Job from 'src/home/experience/Job';
 
 const jobs = [
   {
-    title: 'Full-Stack Engineer',
+    title: 'Full-Stack Developer',
     company: {
-      name: 'Z3 Works',
-      website: 'https://www.z3works.com/'
+      name: 'Truelogic Software',
+      website: 'https://www.truelogicsoftware.com/'
     },
-    period: 'Sep 2018 - Now',
+    period: 'Mar 2020 - Now',
     experience: [
-      'Responsible for working on 5 different products and 13+ applications built with different technologies such as JavaScript, Node.js, Express, React, Redux, AngularJS, Gulp, and Webpack.',
-      'Collaborated on applications that handled telematics data from 40,000+ vehicles using Elasticsearch, RabbitMQ, and SQS.',
-      'Engaged in a team of 10+ people, managed using Scrum practices and Git/GitHub for version control.',
-      'Begin to move applications to run inside Docker containers.'
+      'Contributed to building the Identity Provider system of an LMS company, which aimed to centralize the user identities spread across 10+ products.',
+      'Worked adding features to several React web apps and Java/Spring APIs running in serverless environments.',
+      'Had the opportunity to work with a large set of AWS services, such as Lambda, API Gateway, Cognito, Secrets, SQS, SNS, DynamoDB, S3, CloudFront, among others.',
+      'Managed AWS resources using the concept of Infrastructure as Code, by having environments fully managed by Terraform.'
     ]
   },
   {
@@ -26,19 +26,33 @@ const jobs = [
     },
     period: 'Jan 2015 - Now',
     experience: [
-      'Responsible for managing a technical team of 4 developers and handling our clients\' software architecture.',
-      'Improved 5+ Java, PHP and JavaScript applications of 3 clients from completely different areas.',
+      'Managed a technical team of 4 developers and handled our clients\' software architecture.',
+      'Improved 5+ Java, PHP, and JavaScript applications of 3 clients from completely different areas.',
       'Cooperated to teach our clients how software is built, cultivating the Agile culture within those companies.',
       'Provided technical consulting services for other companies.'
     ]
   },
   {
-    title: 'Full-Stack Engineer & Technical Leader',
+    title: 'Full-Stack Developer',
     company: {
-      name: 'Igen',
+      name: 'Z3 Works',
+      website: 'https://www.z3works.com/'
+    },
+    period: 'Sep 2018 - Aug 2020',
+    experience: [
+      'Responsible for working on 5 different products and 13+ applications built with different technologies such as JavaScript, Node.js, Express, React, Redux, AngularJS, Gulp, and Webpack.',
+      'Collaborated on applications that handled telematics data from 40,000+ vehicles using Elasticsearch, RabbitMQ, and SQS.',
+      'Engaged in a team of 10+ people, managed using Scrum practices and Git/GitHub for version control.',
+      'Begin to move applications to run inside Docker containers.'
+    ]
+  },
+  {
+    title: 'Full-Stack Developer & Technical Leader',
+    company: {
+      name: 'Igen/AFIP',
       website: 'http://redcap.afip.com.br/conteudo_igen.asp'
     },
-    period: 'Oct 2015 - Now',
+    period: 'Oct 2015 - May 2020',
     experience: [
       'Worked on a legacy Java/JSF/JPA/EclipseLink application for managing an SQL Server database with 20GB+ of organ transplant data.',
       'Improved the technology by moving to a Java/Spring REST API and an Angular 7 web application.',
@@ -47,17 +61,17 @@ const jobs = [
     ]
   },
   {
-    title: 'Full-Stack Software Engineer',
+    title: 'Full-Stack Software Developer',
     company: {
       name: 'Quefo.me',
       website: 'https://www.linkedin.com/company/quefome/'
     },
     period: 'Jan 2015 - Oct 2015',
     experience: [
-      'Responsible for fully designing and building the REST API and webapp using different technologies such as Java, Spring, Hibernate, PostgreSQL, JavaScript, Node.js, AngularJS, Grunt and Redis.',
-      'Delivered the MVP implementation in less then 3 months.',
+      'Responsible for fully designing and building the REST API and web app using different technologies such as Java, Spring, Hibernate, PostgreSQL, JavaScript, Node.js, AngularJS, Grunt, and Redis.',
+      'Delivered the MVP implementation in less than 3 months.',
       'Set up a self scalable production environment on Amazon Web Services using EC2, ELB, and CloudFront.',
-      'Actively contributed to the MVP, backlog and product roadmap.',
+      'Actively contributed to the MVP, backlog, and product roadmap.',
       'Went out to sell the product for fast-food delivery establishments (not a technical achievement, but I\'m really proud of myself for doing it).'
     ]
   },
@@ -69,11 +83,12 @@ const jobs = [
     },
     period: 'Mar 2012 - January 2015',
     experience: [
-      'Helped to build the REST API and the web application for handling 10,000+ SMS messages a day using Java, JAX-RS, Hibernate, RabbitMQ, PostgresSQL, NodeJS, AngularJS, and Grunt.',
+      'Helped building the REST API and the web application for handling 10,000+ SMS messages a day using Java, JAX-RS, Hibernate, RabbitMQ, PostgresSQL, NodeJS, AngularJS, and Grunt.',
       'Led the development of a PHP/CakePHP/MySQL billing application MVP, delivered in less than 3 weeks.',
       'Automatized almost the billing process and the remote activation of 100+ clients\' equipment, distributed across 5+ different cities.',
+      'Implemented custom Freeswitch modules to authenticate and bill phone calls using Python and C.',
       'Introduced version control to all projects and team members using Git.',
-      'Adopted iterations, backlogs, planning and review sessions, TDD, pair-programming and other Agile and code quality practices.'
+      'Adopted iterations, backlogs, planning and review sessions, TDD, pair-programming, and other Agile and code quality practices.'
     ]
   },
   {
@@ -84,7 +99,7 @@ const jobs = [
     },
     period: 'Oct 2010 - March 2012',
     experience: [
-      'Responsible for collaborating on a Java, Swing/AWT and Hibernate desktop application used by 30+ companies from 10+ different countries.',
+      'Responsible for collaborating on a Java, Swing/AWT, and Hibernate desktop application used by 30+ companies from 10+ different countries.',
       'Single-handed implemented the data migration of a client\'s legacy software using TDD and OOP concepts.',
       'Worked with Oracle, SQL Server, and Postgres SQL databases.',
       'Contributed to a team of 7+ developers.'

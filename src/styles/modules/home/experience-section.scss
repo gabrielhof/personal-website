@@ -93,12 +93,24 @@
           }
         }
 
-        &:nth-last-child(1) {
-          .job-item-container {
-            &:after {
-              width: 20%;
-              float: right;
-              left: 12px;
+        &:last-child {
+          &:nth-child(even) {
+            .job-item-container {
+              &:after {
+                width: 20%;
+                float: right;
+                left: 12px;
+              }
+            }
+          }
+
+          &:nth-child(odd) {
+            .job-item-container {
+              &:after {
+                width: 20%;
+                float: left;
+                left: -12px;
+              }
             }
           }
         }

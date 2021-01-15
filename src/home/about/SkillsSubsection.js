@@ -34,7 +34,6 @@ export default class SkillsSubsection extends React.PureComponent {
             <ul className="skills-list">
               <li>React</li>
               <li>Redux</li>
-              <li>Gatsby</li>
               <li>Angular 7</li>
               <li>Grunt</li>
               <li>Gulp</li>
@@ -45,6 +44,10 @@ export default class SkillsSubsection extends React.PureComponent {
               <li>EclipseLink</li>
               <li>JSF</li>
               <li>AWS</li>
+              <li>Serveless</li>
+              <li>Lambda</li>
+              <li>API Gateway</li>
+              <li>SQS</li>
               <li>EC2</li>
               <li>S3</li>
               <li>CloudFront</li>
@@ -57,10 +60,8 @@ export default class SkillsSubsection extends React.PureComponent {
             <h4 className="title">Beginner</h4>
 
             <ul className="skills-list">
-              <li>Serveless</li>
-              <li>Lambda</li>
-              <li>API Gateway</li>
-              <li>SQS</li>
+              <li>Python</li>
+              <li>Gatsby</li>
               <li>Elasticsearch</li>
               <li>Redis</li>
               <li>RabbitMQ</li>

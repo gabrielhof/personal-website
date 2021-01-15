@@ -18,7 +18,7 @@ export default class FooterSection extends React.PureComponent {
             </p>
 
             <p>
-              <ExternalLink to="https://github.com/gabrielhof/gabrielhof.github.io">
+              <ExternalLink to="https://github.com/gabrielhof/personal-website">
                 Implemented by Gabriel Hoff.
               </ExternalLink>
             </p>

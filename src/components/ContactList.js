@@ -10,7 +10,7 @@ const links = [
   },
   {
     name: 'linkedin',
-    url: 'ttps://linkedin.com/in/gabrielhof/'
+    url: 'https://linkedin.com/in/gabrielhof/'
   },
   {
     name: 'twitter',
